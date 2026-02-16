@@ -1,5 +1,33 @@
-<div>
-    <h3><b>Hi, User</b></h3>
-    <a routerLink="/doctor"><b>Add Doctor</b></a> |
-    <a routerLink="/doctorlist"><b>Doctor List</b></a>
+<div *ngIf="isLogin()">
+    <h3><b>Hi, {{ form.data.firstName }} ( {{ form.data.roleName }} )</b></h3>
+    <a href="/user"><b>Add User</b></a> |
+    <a href="/userlist"><b>User List</b></a> |
+    <a href="/role"><b>Add Role</b></a> |
+    <a href="/rolelist"><b>Role List</b></a> |
+    <a href="/college"><b>Add College</b></a> |
+    <a href="/collegelist"><b>College List</b></a> |
+    <a href="/course"><b>Add Course</b></a> |
+    <a href="/courselist"><b>Course List</b></a> |
+    <a href="/subject"><b>Add Subject</b></a> |
+    <a href="/subjectlist"><b>Subject List</b></a> |
+    <a href="/faculty"><b>Add Faculty</b></a> |
+    <a href="/facultylist"><b>Faculty List</b></a> |
+    <a href="/marksheet"><b>Add Marksheet</b></a> |
+    <a href="/marksheetlist"><b>Marksheet List</b></a> |
+    <a href="/student"><b>Add student</b></a> |
+    <a href="/studentlist"><b>Student List</b></a> |
+    <a href="/timetable"><b>Add TimeTable</b></a> |
+    <a href="/timetablelist"><b>Timetable List</b></a> |
+    <a href="/changepassword"><b>Change Password</b></a> |
+    
+
+    <a (click)="logout()">
+        <font color="blue"><b>Logout</b></font>
+    </a>
 </div>
+<div *ngIf="!isLogin()">
+    <h3>Hi, Guest</h3>
+    <a href="/dashboard"><b>Dashboard</b></a> |
+    <a href="/login"><b>Login</b></a>
+</div>
+<hr>

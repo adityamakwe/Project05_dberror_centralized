@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <div align="center">
-    <h1 align="center" style="margin-bottom: 5px; color: navy;">Doctor List</h1>
+    <h1 align="center" style="margin-bottom: 5px; color: navy;">User List</h1>
 
     <div style="height: 20px; margin-bottom: 10px; text-align: center;">
         <h3 style="margin: 0; color: green;" *ngIf="!form.error && form.message">{{ form.message }}</h3>
@@ -15,10 +15,10 @@
                     <label><b>First Name: </b></label>
                     <input type="text" name="firstName" [(ngModel)]="form.firstName" placeholder="Enter First Name">&nbsp;
 
-                    <!-- <label><b>Login Id: </b></label>
-                    <input type="text" name="loginId" [(ngModel)]="form.loginId" placeholder="Enter Email ID">&nbsp; -->
+                    <label><b>Login Id: </b></label>
+                    <input type="text" name="loginId" [(ngModel)]="form.loginId" placeholder="Enter Email ID">&nbsp;
 
-                    <label><b>Expertise: </b></label>
+                    <label><b>Role: </b></label>
                     <select name="roleId" [(ngModel)]="form.roleId" style="width: 165px;">
                         <option value="undefined">------------Select------------</option>
                         <option *ngFor="let obj of form.preload.roleList" [value]="obj.id">{{obj.name}}</option>
@@ -38,11 +38,11 @@
                 <th>S.No</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <!-- <th>Login Id</th> -->
+                <th>Login Id</th>
                 <th>Date of Birth</th>
-                <th>Expertise</th>
-                <!-- <th>Address</th> -->
-                <!-- <th>Gender</th> -->
+                <th>Role</th>
+                <th>Address</th>
+                <th>Gender</th>
                 <th>Mobile</th>
                 <th>Edit</th>
             </tr>
@@ -53,11 +53,11 @@
                 <td>{{(form.pageNo*5)+i+ 1}}</td>
                 <td>{{m.firstName}}</td>
                 <td>{{m.lastName}}</td>
-                <!-- <td>{{m.loginId}}</td> -->
+                <td>{{m.loginId}}</td>
                 <td>{{m.dob | date : 'dd-MM-yyyy'}}</td>
-                <td>{{m.expertise}}</td>
-                <!-- <td>{{m.address}}</td> -->
-                <!-- <td>{{m.gender}}</td> -->
+                <td>{{m.roleName}}</td>
+                <td>{{m.address}}</td>
+                <td>{{m.gender}}</td>
                 <td>{{m.mobileNumber}}</td>
                 <td><a (click)="forward( '/user/' +  m.id)" style="cursor: pointer;">Edit</a></td>
             </tr>
@@ -68,7 +68,7 @@
         <table style="width: 100%">
             <tr>
                 <td style="width: 25%"><button (click)="previous()" [disabled]="form.pageNo == 0">previous</button></td>
-                <td align="center" style="width: 25%"><button (click)="forward('/doctor')">new</button></td>
+                <td align="center" style="width: 25%"><button (click)="forward('/user')">new</button></td>
                 <td align="center" style="width: 25%"><button (click)="delete()">delete</button></td>
                 <td style="width: 25%" align="right"><button (click)="next()" [disabled]="form.nextListSize == 0">next</button></td>
             </tr>

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sop-django-doctor-ui'`, () => {
+  it(`should have as title 'sop-django-ui'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sop-django-doctor-ui');
+    expect(app.title).toEqual('sop-django-ui');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('sop-django-doctor-ui app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('sop-django-ui app is running!');
   });
 });
