@@ -74,18 +74,18 @@ WSGI_APPLICATION = 'sop_django.wsgi.application'
 # }
 
 
-# # ✅ DATABASE
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_rest_api',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'CONN_MAX_AGE': 0,
-    }
-}
+# # # ✅ DATABASE
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'django_rest_api',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         'CONN_MAX_AGE': 0,
+#     }
+# }
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 
 # ✅ DATABASE
