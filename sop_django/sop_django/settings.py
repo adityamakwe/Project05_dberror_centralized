@@ -81,24 +81,12 @@ WSGI_APPLICATION = 'sop_django.wsgi.application'
 #         'NAME': 'django_rest_api',
 #         'USER': 'root',
 #         'PASSWORD': 'root',
-#         'HOST': '127.0.0.1',
+#         'HOST': 'db',
 #         'PORT': '3306',
 #         'CONN_MAX_AGE': 0,
 #     }
 # }
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
-
-# ✅ DATABASE
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_rest_api',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'db',
-        'PORT': '3306',
-    }
-}
 
 
 # ✅ PASSWORD VALIDATION
