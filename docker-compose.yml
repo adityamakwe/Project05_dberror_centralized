@@ -7,7 +7,7 @@ services:
     container_name: mysql_db_3
     restart: always
     environment:
-      MYSQL_DATABASE: usecase_doctor
+      MYSQL_DATABASE: django_rest_api
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - mysql_data:/var/lib/mysql
@@ -22,7 +22,7 @@ services:
       - db
     environment:
       DB_HOST: db
-      DB_NAME: usecase_doctor
+      DB_NAME: django_rest_api
       DB_USER: root
       DB_PASSWORD: root
       DB_PORT: 3306
